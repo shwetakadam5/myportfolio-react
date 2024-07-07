@@ -2,6 +2,8 @@
 export default function AboutMe() {
   return (
     <div>
+      <p>About Me</p>
+      <p>Avatar Image</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
         tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
