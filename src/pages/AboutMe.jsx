@@ -1,9 +1,23 @@
-// This is a static page mocking an "About Us" section for our fake user data
+import Avatar from "react-avatar";
+import avatarWoman from "../assets/woman.png";
 export default function AboutMe() {
   return (
-    <div>
+    <div id="aboutme">
       <p>About Me</p>
-      <p>Avatar Image</p>
+      <Avatar
+        //githubHandle="shwetakadam5"
+        src={avatarWoman}
+        name="Shweta Kadam Zutshi"
+        size="100"
+        round={true}
+        initials={(name) =>
+          name
+            .split(" ")
+            .map((n) => n[0])
+            .join("")
+            .toUpperCase()
+        }
+      />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
         tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis

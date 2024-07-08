@@ -1,5 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 export default function ErrorPage() {
   const error = useRouteError();
   console.error(error);
@@ -14,6 +15,7 @@ export default function ErrorPage() {
           <i>{error.statusText || error.message}</i>
         </p>
       </div>
+      <Footer />
     </>
   );
 }
