@@ -8,7 +8,9 @@
 
 #aboutme,
 #error-page,
-#resume {
+#resume,
+#contact,
+#portfolio {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
