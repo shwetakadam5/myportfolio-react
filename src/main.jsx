@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import AboutMe from "./pages/AboutMe.jsx";
+import Resume from "./pages/Resume.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 
 import "./index.css";
 
@@ -21,12 +21,16 @@ const router = createBrowserRouter([
         element: <AboutMe />,
       },
       {
-        path: "about",
+        path: "/portfolio",
         // element: <AboutPage />,
       },
       {
-        path: "profile/:id",
+        path: "/contact",
         // element: <ProfilePage />,
+      },
+      {
+        path: "/resume",
+        element: <Resume />,
       },
     ],
   },
