@@ -4,7 +4,15 @@
   --light: #fff;
 }
 #header {
-  justify-content: space-around;
+  padding: 1rem;
+  text-align: center;
+  background: var(--dark);
+  color: var(--light);
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 #footer {
@@ -22,7 +30,11 @@
   padding: 10px;
   margin: 10px;
 }
-
+#introduction,
+#avatarimage {
+  padding: 10px;
+  margin: 10px;
+}
 /*section that holds both images and the text we want to place over the image of Project work*/
 .portfolio-container {
   position: relative;

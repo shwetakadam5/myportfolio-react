@@ -116,18 +116,18 @@ function Form() {
     <div className="container text-center">
       <form className="form" onSubmit={handleFormSubmit}>
         <div className="form-group row">
-          <label htmlFor="userName">Name</label>
+          <label htmlFor="userName">Name : </label>
           <input
             value={userName}
             name="userName"
             onChange={handleInputChange}
             onBlur={handleOnBlurOfUserName}
             type="text"
-            placeholder="username"
+            placeholder="name"
           />
         </div>
         <div className="form-group row">
-          <label htmlFor="email">Email </label>
+          <label htmlFor="email">Email : </label>
           <input
             value={email}
             name="email"
@@ -138,7 +138,7 @@ function Form() {
           />
         </div>
         <div className="form-group row">
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">Message : </label>
           <input
             value={message}
             name="message"

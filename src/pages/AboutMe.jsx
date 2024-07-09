@@ -4,7 +4,7 @@ export default function AboutMe() {
   return (
     <div id="aboutme">
       <h4>About Me</h4>
-      <div>
+      <div id="avatarimage">
         <Avatar
           //githubHandle="shwetakadam5"
           src={avatarWoman}
@@ -20,15 +20,24 @@ export default function AboutMe() {
           }
         />
       </div>
-      <div>
+      <div id="introduction">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
-          impedit suscipit sed magnam alias in, repellat expedita hic explicabo
-          architecto soluta. About us Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Velit voluptate exercitationem quaerat pariatur
-          mollitia, excepturi, voluptatem eveniet a dolor nobis ex veniam totam
-          nostrum temporibus ad omnis nam rerum eligendi.
+          I am a web application developer with working knowledge of HTML, CSS,
+          Javascripts and advanced Java programming language frameworks like
+          Struts, Springs, Hibernate, EJB 3.0, JPA across different platforms,
+          database and Operating systems.
+        </p>
+        <br />
+        <p>
+          I have good knowledge in Banking, e-Banking, Payment messages and
+          Credit card domains and experience in all SDLC phases of project
+          including design, development, testing, debugging and maintenance of
+          J2EE.
+        </p>
+        <br />
+        <p>
+          I am also an watercolor artist and when I am not coding , I am
+          painting
         </p>
       </div>
     </div>

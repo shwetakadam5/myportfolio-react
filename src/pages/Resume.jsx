@@ -15,15 +15,26 @@ export default function Resume() {
         </p>
       </div>
       <div>
-        <p>Front End Proficiences</p>
+        <p>Front-end Proficiences</p>
         <ul>
           <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+          <li>React</li>
+          <li>Bootstrap</li>
+          <li>Bulma</li>
         </ul>
       </div>
       <div>
-        <p>Back End Proficiences</p>
+        <p>Back-end Proficiences</p>
         <ul>
-          <li>PostGres</li>
+          <li>APIs</li>
+          <li>Node</li>
+          <li>PostGres,Sequelize</li>
+          <li>MongoDB, Mongoose</li>
+          <li>REST</li>
+          <li>GraphQL</li>
         </ul>
       </div>
     </div>
