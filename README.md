@@ -54,11 +54,8 @@ SO THAT I can assess whether they're a good candidate for an open position
 
 ## Usage
 
-1. Open the terminal and navigate to the project path \*\*\social-network , run the command npm install to create the initial seed data for the application.
-2. On completion of seeding, run the command npm start to start the application.
-3. Open Insomnia to execute the APIs as per the requirement.
-
 **Link for the repository :**
+
 https://github.com/shwetakadam5/myportfolio-react
 
 **Link for the deployed application :**
@@ -119,11 +116,11 @@ Examples of Errors :
 
 #### 1. **_myportfolio-react :Error : Name is required :_**
 
-![Image Unavailable](./assets/images/01_Error_InvalidID.jpg)
+![Image Unavailable](./src/assets/05_Error_Required.jpeg)
 
 #### 2. **_myportfolio-react :Error : Email is invalid. :_**
 
-![Image Unavailable](./assets/images/02_Error_NoUserFound.jpg)
+![Image Unavailable](./src/assets/06_Error_Invalid.jpeg)
 
 ## Credits and Helpful Resources
 
