@@ -2,7 +2,7 @@ import Form from "../components/Form";
 export default function Contact() {
   return (
     <div id="contact">
-      <p>Contact</p>
+      <h4>Contact</h4>
       <Form />
     </div>
   );

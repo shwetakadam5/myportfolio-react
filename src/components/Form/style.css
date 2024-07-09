@@ -8,3 +8,11 @@
   margin-bottom: 5px;
   width: 100%;
 }
+
+.form label {
+  text-align: left;
+}
+
+.container {
+  background-color: lightgray;
+}

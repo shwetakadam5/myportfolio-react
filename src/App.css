@@ -14,10 +14,13 @@
 #aboutme,
 #error-page,
 #resume,
-#contact {
+#contact,
+#portfolio-list {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  margin: 10px;
 }
 
 /*section that holds both images and the text we want to place over the image of Project work*/

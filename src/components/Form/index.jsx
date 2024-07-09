@@ -115,31 +115,39 @@ function Form() {
   return (
     <div className="container text-center">
       <form className="form" onSubmit={handleFormSubmit}>
-        <input
-          value={userName}
-          name="userName"
-          onChange={handleInputChange}
-          onBlur={handleOnBlurOfUserName}
-          type="text"
-          placeholder="username"
-        />
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          onBlur={handleOnBlurOfEmail}
-          type="email"
-          placeholder="email"
-        />
-
-        <input
-          value={message}
-          name="message"
-          onChange={handleInputChange}
-          onBlur={handleOnBlurOfMessage}
-          type="textarea"
-          placeholder="message"
-        />
+        <div className="form-group row">
+          <label htmlFor="userName">Name</label>
+          <input
+            value={userName}
+            name="userName"
+            onChange={handleInputChange}
+            onBlur={handleOnBlurOfUserName}
+            type="text"
+            placeholder="username"
+          />
+        </div>
+        <div className="form-group row">
+          <label htmlFor="email">Email </label>
+          <input
+            value={email}
+            name="email"
+            onChange={handleInputChange}
+            onBlur={handleOnBlurOfEmail}
+            type="email"
+            placeholder="email"
+          />
+        </div>
+        <div className="form-group row">
+          <label htmlFor="message">Message</label>
+          <input
+            value={message}
+            name="message"
+            onChange={handleInputChange}
+            onBlur={handleOnBlurOfMessage}
+            type="textarea"
+            placeholder="message"
+          />
+        </div>
         {/* TODO Add another input field with a value, name, type, and placeholder of "password" */}
         {/* TODO Add a `onChange` attribute with a value of `handleInputChange` */}
         <button type="submit">Submit</button>

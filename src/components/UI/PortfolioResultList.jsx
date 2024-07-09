@@ -15,7 +15,7 @@ function PortfolioResultList(props) {
             title="Image of project"
           />
           <div className="project-contents">
-            <h5> {result.name}</h5>
+            <h6> {result.name}</h6>
             <p>
               <Link className="nav-link text-dark" to={result.html_url}>
                 <img id="github-img" src={social} alt="Nature"></img>

@@ -40,8 +40,11 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div id="portfolios">
-      <PortfolioResultList results={results} />
+    <div id="portfolio-list">
+      <h4>Portfolio</h4>
+      <div id="portfolios">
+        <PortfolioResultList results={results} />
+      </div>
     </div>
   );
 }
