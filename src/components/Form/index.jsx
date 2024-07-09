@@ -139,22 +139,22 @@ function Form() {
         </div>
         <div className="form-group row">
           <label htmlFor="message">Message : </label>
-          <input
+          <textarea
             value={message}
             name="message"
             onChange={handleInputChange}
             onBlur={handleOnBlurOfMessage}
-            type="textarea"
+            type="message"
             placeholder="message"
           />
         </div>
         {/* TODO Add another input field with a value, name, type, and placeholder of "password" */}
         {/* TODO Add a `onChange` attribute with a value of `handleInputChange` */}
-        <button type="submit">Submit</button>
+        <button id="formsubmitbtn" type="submit">Submit</button>
       </form>
       {errorMessage && (
         <div>
-          <p className="error-text">{errorMessage}</p>
+          <p className="error-text text-danger">{errorMessage}</p>
         </div>
       )}
     </div>
