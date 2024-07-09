@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import AboutMe from "./pages/AboutMe.jsx";
 import Resume from "./pages/Resume.jsx";
 import Contact from "./pages/Contact.jsx";
-import Portfolio from "./pages/Portfolio.jsx";
+import Portfolio from "./components/Portfolio.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
