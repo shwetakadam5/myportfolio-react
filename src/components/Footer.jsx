@@ -7,6 +7,7 @@ import {
   faTwitter,
   faGithub,
   faLinkedin,
+  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 export default function Nav() {
   // The Navbar UI component will render each of the Link elements in the links prop
@@ -46,6 +47,13 @@ export default function Nav() {
             to="https://www.linkedin.com/"
           >
             <FontAwesomeIcon icon={faLinkedin} />
+          </Link>,
+          <Link
+            key={6}
+            className="nav-link text-light"
+            to="https://stackoverflow.com/users/23349379/shwetaz"
+          >
+            <FontAwesomeIcon icon={faStackOverflow} />
           </Link>,
         ]}
       />
