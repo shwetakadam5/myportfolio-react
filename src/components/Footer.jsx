@@ -1,5 +1,5 @@
 // Bringing in the required import from 'react-router-dom'
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FooterLinks from "./UI/FooterLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -9,10 +9,9 @@ import {
   faLinkedin,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-export default function Nav() {
+export default function Footer() {
   // The Navbar UI component will render each of the Link elements in the links prop
-  const currentPage = useLocation().pathname;
-  console.log(currentPage);
+
   return (
     <div>
       <FooterLinks

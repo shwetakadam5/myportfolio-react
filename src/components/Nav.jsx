@@ -4,7 +4,7 @@ import Navbar from "./UI/NavBar";
 export default function Nav() {
   // The Navbar UI component will render each of the Link elements in the links prop
   const currentPage = useLocation().pathname;
-  console.log(currentPage);
+
   return (
     <Navbar
       links={[
