@@ -37,25 +37,79 @@ function Form() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage("Email or username is invalid");
+    if (!userName) {
+      setErrorMessage("Name is required.");
+      return;
+    }
 
+    if (!email) {
+      setErrorMessage("Email is required");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setErrorMessage("Email is invalid.");
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
     }
-    // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    if (!message) {
+      setErrorMessage("Message is required.");
+      return;
+    }
+    // Then we check to see if the message is not valid. If so, we set an error message regarding the message.
     if (!checkMessage(message)) {
-      setErrorMessage(`Please enter valid message: ${message}`);
+      setErrorMessage("Please enter valid message");
       return;
     }
 
     // If successful, we want to clear out the input after registration.
     setUserName("");
-    // TODO: Set the password back to an empty string after the user clicks submit
-
     setEmail("");
     setMessage("");
-    alert(`Hello ${userName}`);
+  };
+
+  const handleOnBlurOfUserName = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    e.preventDefault();
+    //we check to see if the userName is empty. If so we set an error message to be displayed on the page.
+    if (!userName) {
+      setErrorMessage("Name is required.");
+      return;
+    }
+    setErrorMessage("");
+  };
+
+  const handleOnBlurOfEmail = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    e.preventDefault();
+
+    if (!email) {
+      setErrorMessage("Email is required");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setErrorMessage("Email is invalid.");
+      return;
+    }
+
+    setErrorMessage("");
+  };
+
+  const handleOnBlurOfMessage = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    e.preventDefault();
+    if (!message) {
+      setErrorMessage("Message is required.");
+      return;
+    }
+
+    if (!checkMessage(message)) {
+      setErrorMessage("Please enter valid message");
+      return;
+    }
+
+    setErrorMessage("");
   };
 
   return (
@@ -65,6 +119,7 @@ function Form() {
           value={userName}
           name="userName"
           onChange={handleInputChange}
+          onBlur={handleOnBlurOfUserName}
           type="text"
           placeholder="username"
         />
@@ -72,6 +127,7 @@ function Form() {
           value={email}
           name="email"
           onChange={handleInputChange}
+          onBlur={handleOnBlurOfEmail}
           type="email"
           placeholder="email"
         />
@@ -80,6 +136,7 @@ function Form() {
           value={message}
           name="message"
           onChange={handleInputChange}
+          onBlur={handleOnBlurOfMessage}
           type="textarea"
           placeholder="message"
         />

@@ -5,7 +5,7 @@ export function validateEmail(email) {
 }
 
 export function checkMessage(input) {
-  const userMessage = /^[A-Za-z]$/;
+  const userMessage = /^[A-Za-z0-9]+$/;
   if (input.match(userMessage)) {
     return true;
   }
