@@ -1,17 +1,12 @@
 import { useState } from "react";
 import "./style.css";
-
-// Here we import a helper function that will check if the email is valid
 import { checkMessage, validateEmail } from "../../utils/helpers";
 
 function Form() {
-  // Create state variables for the fields in the form
-  // We are also setting their initial values to an empty string
+  // Create state variables for the fields in the form and setting their initial values to empty string
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
-  // TODO: Create a password variable and a function "setPassword" using useState
   const [message, setMessage] = useState("");
-
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (e) => {
@@ -20,9 +15,7 @@ function Form() {
     const inputType = target.name;
     const inputValue = target.value;
 
-    // Based on the input type, we set the state of either email, username, and password
-    // TODO: Add an else statement to the end that will set the password to the value of 'inputValue'
-
+    // Based on the input type, we set the state of either email, username or message
     if (inputType === "email") {
       setEmail(inputValue);
     } else if (inputType === "userName") {
@@ -36,27 +29,32 @@ function Form() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+    // First we check to see if the userName is empty. If so we set an error message to be displayed on the page.
     if (!userName) {
       setErrorMessage("Name is required.");
       return;
     }
 
+    // Check if the email is empty. If so we set an error message to be displayed on the page.
     if (!email) {
       setErrorMessage("Email is required");
       return;
     }
 
+    // Check if the email is in valid format. If so we set an error message to be displayed on the page.
     if (!validateEmail(email)) {
       setErrorMessage("Email is invalid.");
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
     }
+
+    // Check if the message is empty. If so we set an error message to be displayed on the page.
     if (!message) {
       setErrorMessage("Message is required.");
       return;
     }
-    // Then we check to see if the message is not valid. If so, we set an error message regarding the message.
+
+    // Check if the message is having valid details. If so we set an error message to be displayed on the page.
     if (!checkMessage(message)) {
       setErrorMessage("Please enter valid message");
       return;
@@ -68,10 +66,10 @@ function Form() {
     setMessage("");
   };
 
+  //Triggered on blur of the name field
   const handleOnBlurOfUserName = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
-    //we check to see if the userName is empty. If so we set an error message to be displayed on the page.
+
     if (!userName) {
       setErrorMessage("Name is required.");
       return;
@@ -79,8 +77,8 @@ function Form() {
     setErrorMessage("");
   };
 
+  //Triggered on blur of the email field
   const handleOnBlurOfEmail = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
     if (!email) {
@@ -96,8 +94,8 @@ function Form() {
     setErrorMessage("");
   };
 
+  //Triggered on blur of the message field
   const handleOnBlurOfMessage = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
     if (!message) {
       setErrorMessage("Message is required.");
@@ -148,9 +146,10 @@ function Form() {
             placeholder="message"
           />
         </div>
-        {/* TODO Add another input field with a value, name, type, and placeholder of "password" */}
-        {/* TODO Add a `onChange` attribute with a value of `handleInputChange` */}
-        <button id="formsubmitbtn" type="submit">Submit</button>
+
+        <button id="formsubmitbtn" type="submit">
+          Submit
+        </button>
       </form>
       {errorMessage && (
         <div>
